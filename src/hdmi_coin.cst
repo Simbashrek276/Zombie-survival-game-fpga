@@ -1,0 +1,32 @@
+IO_LOC "tmds_d_p[0]" 30,29;
+IO_PORT "tmds_d_p[0]" PULL_MODE=NONE DRIVE=8;
+IO_LOC "tmds_d_p[1]" 32,31;
+IO_PORT "tmds_d_p[1]" PULL_MODE=NONE DRIVE=8;
+IO_LOC "tmds_d_p[2]" 35,34;
+IO_PORT "tmds_d_p[2]" PULL_MODE=NONE DRIVE=8;
+IO_LOC "tmds_clk_p" 28,27;
+IO_PORT "tmds_clk_p" PULL_MODE=NONE DRIVE=8;
+
+IO_LOC "resetn" 14;
+IO_PORT "resetn" PULL_MODE=UP;
+IO_LOC "clk" 45;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Five game buttons. WASD moves the player, btn_skill starts the fast-shooting
+// skill once the kill streak is full.
+// Restarting after a game over is done with the board's own reset button.
+
+IO_LOC "btn_left" 20;
+IO_PORT "btn_left" PULL_MODE=UP BANK_VCCIO=1.8;
+
+IO_LOC "btn_up" 16;
+IO_PORT "btn_up" PULL_MODE=UP BANK_VCCIO=1.8;
+
+IO_LOC "btn_down" 13;
+IO_PORT "btn_down" PULL_MODE=UP BANK_VCCIO=1.8;
+
+IO_LOC "btn_right" 17;
+IO_PORT "btn_right" PULL_MODE=UP BANK_VCCIO=1.8;
+
+IO_LOC "btn_skill" 18;
+IO_PORT "btn_skill" PULL_MODE=UP BANK_VCCIO=1.8;

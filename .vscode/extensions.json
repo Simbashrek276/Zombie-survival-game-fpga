@@ -1,0 +1,11 @@
+{
+  // VS Code offers these to anyone who opens the project. Only one is really
+  // needed: the Verilog extension, which provides syntax highlighting and drives
+  // the Icarus Verilog linter configured in settings.json.
+  //
+  // Nothing here builds the bitstream. That is the Gowin IDE, which is a separate
+  // download and is not a VS Code extension. See the README.
+  "recommendations": [
+    "mshr-h.veriloghdl"
+  ]
+}
