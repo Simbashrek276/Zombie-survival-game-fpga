@@ -1,0 +1,18 @@
+{
+  // Verilog-HDL/SystemVerilog (mshr-h.veriloghdl) + Icarus Verilog
+  "verilog.linting.linter": "iverilog",
+
+  // `include 搜尋路徑。此外掛不支援 ${workspaceFolder}，
+  // 相對路徑會自動接在 workspace 根目錄後面 -> <root>/src
+  // 這樣 `include "game/game_defs.vh"、"hdmi/svo_defines.vh" 才找得到
+  // src/hdmi is needed too: the svo_*.v files include "svo_defines.vh" without
+  // a folder prefix, so the linter must be able to find it there.
+  "verilog.linting.iverilog.includePath": [
+    "src",
+    "src/hdmi"
+  ],
+
+  // -y 為模組自動搜尋目錄，讓 lint 單一檔時也能解析到 rom 等被實例化的模組
+  // (linter cwd 預設即 workspace 根目錄，故用相對路徑即可)
+  "verilog.linting.iverilog.arguments": "-y src/common -y src/game -y src/hdmi -y src/overlay -y src/ip"
+}

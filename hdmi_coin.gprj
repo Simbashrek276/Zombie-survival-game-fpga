@@ -1,0 +1,31 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NSR-4C" pn="GW1NSR-LV4CQN48PC6/I5">gw1nsr4c-000</Device>
+    <FileList>
+        <File path="src/common/debounce.v" type="file.verilog" enable="1"/>
+        <File path="src/common/ff_sync.v" type="file.verilog" enable="1"/>
+        <File path="src/common/bin2bcd.v" type="file.verilog" enable="1"/>
+        <File path="src/common/lfsr32.v" type="file.verilog" enable="1"/>
+        <File path="src/common/reset_sync.v" type="file.verilog" enable="1"/>
+        <File path="src/common/rom.v" type="file.verilog" enable="1"/>
+        <File path="src/game/game_core.v" type="file.verilog" enable="1"/>
+        <File path="src/game/game_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/game/game_defs.vh" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/svo_defines.vh" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/svo_enc.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/svo_hdmi.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/svo_tmds.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/gowin_clkdiv.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/gowin_pllvr.v" type="file.verilog" enable="1"/>
+        <File path="src/overlay/bg_layer.v" type="file.verilog" enable="1"/>
+        <File path="src/overlay/obj_layer.v" type="file.verilog" enable="1"/>
+        <File path="src/overlay/res_overlay.v" type="file.verilog" enable="1"/>
+        <File path="src/overlay/ui_layer.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi_coin.cst" type="file.cst" enable="1"/>
+        <File path="src/hdmi_coin.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>
