@@ -1,10 +1,10 @@
 # Zombie Survival on a Tang Nano 4K
 
-A side-view survival shooter written in Verilog, running on a Sipeed Tang Nano 4K
+This is a a side-view survival shooter written in Verilog, running on a Sipeed Tang Nano 4K
 (Gowin GW1NSR-4C) and drawn straight out to HDMI at 640x480.
 
-We built this as Team 7A during the TSIC x Synopsys summer camp, and it ended up
-taking 3rd prize in the hackathon we finished the camp with.
+We built this as Team 7A during the TSIC x Synopsys summer camp's hackathon, and it ended up
+taking 3rd prize.
 
 You play a survivor defending a bunker on the left of the screen, and zombies
 keep walking in from the right to get at it. You shoot at them constantly without
@@ -14,10 +14,8 @@ past you to the bunker, which means how long you last is the only score there is
 
 ## Playing
 
-There are five buttons altogether. WASD moves you around the ground and the fifth
-one fires your skill, and when you die you start again with the reset button that
-already comes on the board, so that was one thing we never had to wire up
-ourselves.
+In this game (or as you can see on the breadboard prototype), there are five buttons altogether. For the first 4 buttons, from left to right, equals to moving left, up, down, and right, and the fifth
+one (the rightmost one) fires your skill (which just shoots faster to clear more zombies). When you die, you will press the "RESET" button on the Tang Nano board to basically start the game over.
 
 We decided fairly early that there wouldn't be a fire button at all, because the
 survivor shoots on his own the whole time and always faces right. Nothing starts
