@@ -1,16 +1,23 @@
 # Zombie Survival on a Tang Nano 4K
 
-This is a a side-view survival shooter written in Verilog, running on a Sipeed Tang Nano 4K
+This is a side-view survival shooter written in Verilog, running on a Sipeed Tang Nano 4K
 (Gowin GW1NSR-4C) and drawn straight out to HDMI at 640x480.
 
-We built this as Team 7A during the TSIC x Synopsys summer camp's hackathon, and it ended up
-taking 3rd prize.
+We built this as Team 7A during the 4 days TSIC x Synopsys summer camp's hackathon, and it ended up
+taking 3rd prize in the Creative Ideation Award.
+
+![The game running on a monitor, driven by the Tang Nano and the breadboard controller](images/gamedemo.jpg)
 
 You play a survivor defending a bunker on the left of the screen, and zombies
 keep walking in from the right to get at it. You shoot at them constantly without
 having to press anything, so the game is really about moving well and knowing
 when to spend your skill. A run ends the moment a zombie touches you or slips
 past you to the bunker, which means how long you last is the only score there is.
+
+That photo is the whole thing actually working. The board is in the hand on the
+left, the breadboard controller is plugged into it, and everything on the screen
+is being generated live by the FPGA. You can see the level counter on the left,
+the survival timer in the middle, and the kill streak over on the right.
 
 ## Playing
 
@@ -103,7 +110,6 @@ wire them to 3.3 V or to anything else that drives a voltage into them.
 HDMI goes to a monitor and USB-C goes to your computer, and since the USB-C
 carries the power and the bitstream both, there is nothing else to plug in.
 
-<!-- TODO: add a photo of the game running on a screen, e.g. images/gameplay.jpg -->
 
 ## What you need to install
 
@@ -227,6 +233,28 @@ cannot read either of them directly, both get converted into `.mem` files in
 
 Remember to re-run the matching task whenever you change any of the art,
 otherwise the build will keep using the old `.mem` files.
+
+## The hackathon
+
+We had four days to go from never having written a line of Verilog to something
+we could stand up and demo, and the last of those days was spent presenting it to
+the judges and answering for every decision we had made.
+
+![Presenting the project structure, with the game running on the monitor beside us](images/presenting1.jpg)
+
+The slide on the screen there is our walkthrough of how the repository is laid
+out, which is more or less the same tour as the [Where to change
+things](#where-to-change-things) table further up. On the monitor next to us you
+can see the game over panel showing a run that lasted 55 seconds.
+
+![Answering questions from the judges after the presentation](images/QNA.jpg)
+
+Then came the questions, which is the part none of us could really rehearse for.
+
+![Team 7A collecting the 3rd place certificates for the Creative Ideation Award](images/3rd-prize.jpg)
+
+We came third for the Creative Ideation Award, and that is our game frozen on the
+projector behind us.
 
 ## The team
 
