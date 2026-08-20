@@ -14,15 +14,16 @@ having to press anything, so the game is really about moving well and knowing
 when to spend your skill. A run ends the moment a zombie touches you or slips
 past you to the bunker, which means how long you last is the only score there is.
 
-That photo is the whole thing actually working. The board is in the hand on the
-left, the breadboard controller is plugged into it, and everything on the screen
-is being generated live by the FPGA. You can see the level counter on the left,
-the survival timer in the middle, and the kill streak over on the right.
+In the photo above, I was demo-ing the game to the judges, in which the breadboard prototype was being used to control the FPGA board. The game works by having the FPGA board  plugged with an HDMI cable and code previously uploaded by our team pre-presentation. On the screen, everything is being generated live by the FPGA. You can see the level counter on the left,
+the survival timer in the middle, and the kill streak over on the right (they're a bit hard to see due to the colors).
 
 ## Playing
 
 In this game (or as you can see on the breadboard prototype), there are five buttons altogether. For the first 4 buttons, from left to right, equals to moving left, up, down, and right, and the fifth
 one (the rightmost one) fires your skill (which just shoots faster to clear more zombies). When you die, you will press the "RESET" button on the Tang Nano board to basically start the game over.
+
+<img src="images/controller.jpg" width="360" alt="The breadboard controller, five buttons in a row wired to the Tang Nano 4K"><br>
+<sub>The five buttons, with the Tang Nano and its RESET button on the right.</sub>
 
 We decided fairly early that there wouldn't be a fire button at all, because the
 survivor shoots on his own the whole time and always faces right. Nothing starts
@@ -75,8 +76,6 @@ coming at you. That saved us two more sprites we had no room for.
 
 ## The hardware
 
-![The controller, five buttons on a breadboard next to the Tang Nano 4K](images/controller.jpg)
-
 Everything runs off the one board. The Tang Nano handles the video by itself, so
 the only thing we actually had to build was a controller, and that turned out to
 be five buttons on a breadboard.
@@ -99,13 +98,15 @@ by itself and only reads low while you are actually holding a button down. That
 is also the reason `debounce.v` inverts its input and treats low as pressed,
 which looks completely backwards until you know why it is there.
 
-![The five buttons, each with one jumper to a pin and one to the ground rail](images/buttons.jpg)
+<img src="images/buttons.jpg" width="360" alt="The five buttons, each with one jumper to a pin and one to the ground rail"><br>
+<sub>Each button has one jumper to its pin and one to the ground rail, and no resistors anywhere.</sub>
 
 The one thing worth being careful about is that those five pins sit in a 1.8 V
 bank. Shorting them to ground is exactly what they are for, but you should not
 wire them to 3.3 V or to anything else that drives a voltage into them.
 
-![Close-up of the Tang Nano 4K, HDMI on one end and USB-C on the other](images/tang-nano.jpg)
+<img src="images/tang-nano.jpg" width="360" alt="Close-up of the Tang Nano 4K, HDMI on one end and USB-C on the other"><br>
+<sub>The Tang Nano 4K, with HDMI on one end and USB-C on the other.</sub>
 
 HDMI goes to a monitor and USB-C goes to your computer, and since the USB-C
 carries the power and the bitstream both, there is nothing else to plug in.
